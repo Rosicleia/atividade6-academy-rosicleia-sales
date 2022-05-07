@@ -1,0 +1,22 @@
+{
+  "name": "atividade6-academy-rosicleia-sales",
+  "version": "1.0.0",
+  "description": "atividade6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rosicleia/atividade6-academy-rosicleia-sales.git"
+  },
+  "author": "Rosicléia Bezerra Sales da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rosicleia/atividade6-academy-rosicleia-sales/issues"
+  },
+  "homepage": "https://github.com/Rosicleia/atividade6-academy-rosicleia-sales#readme",
+  "dependencies": {
+    "cypress": "^9.6.0"
+  }
+}
