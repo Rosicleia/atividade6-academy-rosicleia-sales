@@ -4,7 +4,8 @@
   "description": "atividade6",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/Rosicleia/atividade6-academy-rosicleia-sales#readme",
   "dependencies": {
-    "cypress": "^9.6.0"
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
   }
 }
