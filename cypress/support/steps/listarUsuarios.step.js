@@ -5,21 +5,19 @@ Given("acessei o sistema", () => {
 });
 
 When("acessei a tela que lista os usuários", () => {
-   listarUsuariosPage.acessarListaDeUsuarios();
+    listarUsuariosPage.acessarListaDeUsuarios();
 });
 
 Then("visualizo a lista de todos os usuários cadastrados", () => {
     listarUsuariosPage.exibirListaDeUsuarios();
 });
 
-
-
 Given("acessei o sistema", () => {
     listarUsuariosPage.acessarSistema();
 });
 
 When("acessei a tela que lista os usuários", () => {
-   listarUsuariosPage.acessarListaDeUsuarios();
+    listarUsuariosPage.acessarListaDeUsuarios();
 });
 
 Then("Não visualizo nenhum usuário", () => {
