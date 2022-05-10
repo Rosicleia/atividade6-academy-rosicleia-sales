@@ -25,10 +25,13 @@ class RemoverUsuarioPage {
         cy.intercept("GET", "/api/v1/users", []);
     }
 
-    clicarEmConfirmar() {
-        cy.contains("button", "Confirmar").click();
+    clicarEmConfirmar() { 
+        cy.intercept("DELETE", `/api/v1/users/${this.usuario.id}`, { 
+            statusCode: 204, 
+        }); 
+        cy.contains("button", "Confirmar").click(); 
     }
-
+    
     clicarEmCancelar() {
         cy.contains("button", "Cancelar").click();
     }
