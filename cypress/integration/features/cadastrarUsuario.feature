@@ -116,3 +116,13 @@ Feature: Cadastrar Usuário
         When informo somente o nome válido
             | nome | rosicleia |
         Then visualizo a mensagem de erro: O campo e-mail é obrigatório "O campo e-mail é obrigatório."
+
+    Scenario: Deve ser possível retornar da tela de cadastro para a Lista de Usuários cadastrados
+        When não informo o nome e o e-mail
+        Then visualizo o botão voltar
+        And visualizo a lista de usuários cadastrados
+
+    Scenario: Deve ser possível ir da tela de cadastro para a Lista de Usuários cadastrados
+        When não informo o nome e o e-mail
+        Then visualizo o logotipo
+        And visualizo a lista de usuários cadastrados

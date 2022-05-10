@@ -20,6 +20,11 @@ class RemoverUsuarioPage {
         cy.contains("Deseja realmente remover este usuário ?").should("be.visible");        
     }
 
+    exibeMensagemUsuarioRemovido() {
+        cy.contains(".go3958317564", "Usuário removido!").should("be.visible");
+        cy.intercept("GET", "/api/v1/users", []);
+    }
+
     clicarEmConfirmar() {
         cy.contains("button", "Confirmar").click();
     }

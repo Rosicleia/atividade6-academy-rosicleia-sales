@@ -3,13 +3,13 @@ Feature: Atualizar Usuário
     Desejo atualizar as informações de determinado usuário
     Para ter o registro de suas informações atualizadas
 
-   Background: Acessar a tela para atualizar usuário
+    Background: Acessar a tela para atualizar usuário
         Given acessei a tela para atualizar usuário
 
     Scenario: Deve ser possível atualizar um usuário informando nome e e-mail válidos
         When informo os dados válidos para atualizar o usuário
-            | nome  | rosicleia sales           |
-            | email | rosicleiasales@email.com  |
+            | nome  | rosicleia sales          |
+            | email | rosicleiasales@email.com |
         Then visualizo a mensagem: Informações atualizadas com sucesso! "Informações atualizadas com sucesso!"
 
     Scenario: Deve ser possível atualizar um usuário informando 4 caracteres válidos no nome
@@ -46,7 +46,7 @@ Feature: Atualizar Usuário
         When informo o nome com caracteres especiais para atualizar o usuário
             | nome  | @#$%*&              |
             | email | rosicleia@email.com |
-       Then visualizo a mensagem de erro: Formato do nome é inválido, ao atualizar o usuário "Formato do nome é inválido."
+        Then visualizo a mensagem de erro: Formato do nome é inválido, ao atualizar o usuário "Formato do nome é inválido."
 
     Scenario: Não deve ser possível atualizar um usuário informando menos de 4 letras no nome
         When informo o nome com menos de 4 letras para atualizar o usuário
@@ -72,13 +72,11 @@ Feature: Atualizar Usuário
             | email | rosicleia@ |
         Then visualizo a mensagem de erro: Formato de e-mail inválido, ao atualizar o usuário "Formato de e-mail inválido"
 
-
     Scenario: Não deve ser possível atualizar um usuário informando e-mail inválido
         When informo o e-mail inválido para atualizar o usuário
             | nome  | rosicleia       |
             | email | rosicleia@email |
         Then visualizo a mensagem de erro: Formato de e-mail inválido, ao atualizar o usuário "Formato de e-mail inválido"
-
 
     Scenario: Não deve ser possível atualizar um usuário informando e-mail sem uma parte após o ponto
         When informo o e-mail sem uma parte após o ponto para atualizar o usuário
@@ -86,13 +84,11 @@ Feature: Atualizar Usuário
             | email | rosicleia@email. |
         Then visualizo a mensagem de erro: Formato de e-mail inválido, ao atualizar o usuário "Formato de e-mail inválido"
 
-
     Scenario: Não deve ser possível atualizar um usuário informando caracteres especiais no e-mail
         When informo o e-mail com caracteres especiais para atualizar o usuário
             | nome  | rosicleia        |
             | email | !@#$% @email.com |
         Then visualizo a mensagem de erro: Formato de e-mail inválido, ao atualizar o usuário "Formato de e-mail inválido"
-
 
     Scenario: Não deve ser possível atualizar um usuário informando menos de 4 caracteres no e-mail
         When informo o e-mail com menos de 4 caracteres para atualizar o usuário
@@ -120,3 +116,13 @@ Feature: Atualizar Usuário
         When informo somente o nome válido para atualizar o usuário
             | nome | rosicleia |
         Then visualizo a mensagem de erro: O campo e-mail é obrigatório, ao atualizar o usuário "O campo e-mail é obrigatório."
+
+    Scenario: Deve ser possível retornar da tela de atualizar usuário para a Lista de Usuários
+        When não atualizo o nome e o e-mail
+        Then visualizo o botão voltar na tela de atualizar usuário
+        And visualizo a lista de usuários
+
+    Scenario: Deve ser possível ir da tela atualizar usuário para a Lista de Usuários
+        When não atualizo o nome e o e-mail
+        Then visualizo o logotipo na tela de atualizar usuário
+        And visualizo a lista de usuários

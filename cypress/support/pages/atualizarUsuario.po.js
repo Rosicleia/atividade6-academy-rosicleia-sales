@@ -129,5 +129,18 @@ class AtualizarUsuarioPage {
         this.clicarEmSalvar();
         cy.contains(".kseTJf", "O campo e-mail é obrigatório.").should("be.visible");
     }
+
+    clicarEmVoltar(){
+        cy.contains(".beUAqQ", "Voltar").click();
+    }
+
+    retornarParaListaDeUsuarios(){
+        cy.intercept("GET", "/api/v1/users", [this.usuario]);
+        cy.visit("");
+    }
+
+    clicarNoLogotipo(){
+        cy.get(".jbJCFN").click();
+    }
 }
 export var atualizarUsuarioPage = new AtualizarUsuarioPage();

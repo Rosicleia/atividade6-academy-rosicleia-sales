@@ -10,6 +10,7 @@ Feature: Remover Usuário
         When escolho um usuário para ser removido
         Then visualizo a mensagem para remover "Atenção. Deseja realmente remover este usuário ?"
         And confirmo a remoção do usuário
+        And visualizo a mensagem: Usuário removido! "Usuário removido!"
 
     Scenario: Não deve ser possível remover um usuário cadastrado 
         When escolho um usuário para ser removido

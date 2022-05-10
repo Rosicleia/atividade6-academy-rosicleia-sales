@@ -58,7 +58,7 @@ Then("visualizo a mensagem: Informações atualizadas com sucesso! {string}", (m
 
 //Não deve ser possível atualizar um usuário com e-mail já utilizado no cadastro de outro usuário.
 Given("acessei a tela atualizar usuário", () => {
-    atualizarUsuarioPage.acessarCadastroDeUsuario();
+    atualizarUsuarioPage.acessarSistemaEAtualizarUsuario();
 });
 
 When("informo um e-mail já utilizado para atualizar o usuário", (dados) => {
@@ -266,4 +266,36 @@ When("informo somente o nome válido para atualizar o usuário", (dados) => {
 
 Then("visualizo a mensagem de erro: O campo e-mail é obrigatório, ao atualizar o usuário {string}", (mensagemErro) => {
     atualizarUsuarioPage.exibirMensagemErroEmailObrigatorio(mensagemErro);
+});
+
+//Deve ser possível retornar da tela de atualizar usuário para a Lista de Usuários
+Given("acessei a tela para atualizar usuário", () => {
+    atualizarUsuarioPage.acessarSistemaEAtualizarUsuario();
+});
+
+When("não atualizo o nome e o e-mail", () => {
+});
+
+Then("visualizo o botão voltar na tela de atualizar usuário", () => {
+    atualizarUsuarioPage.clicarEmVoltar();
+});
+
+And("visualizo a lista de usuários", () => {
+    atualizarUsuarioPage.retornarParaListaDeUsuarios();
+});
+
+//Deve ser possível ir da tela atualizar usuário para a Lista de Usuários
+Given("acessei a tela para atualizar usuário", () => {
+    atualizarUsuarioPage.acessarSistemaEAtualizarUsuario();
+});
+
+When("não atualizo o nome e o e-mail", () => {
+});
+
+Then("visualizo o logotipo na tela de atualizar usuário", () => {
+    atualizarUsuarioPage.clicarNoLogotipo();
+});
+
+And("visualizo a lista de usuários", () => {
+    atualizarUsuarioPage.retornarParaListaDeUsuarios();
 });

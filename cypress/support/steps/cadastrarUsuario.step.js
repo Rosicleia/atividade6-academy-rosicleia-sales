@@ -267,3 +267,35 @@ When("informo somente o nome válido", (dados) => {
 Then("visualizo a mensagem de erro: O campo e-mail é obrigatório {string}", (mensagemErro) => {
     cadastrarUsuarioPage.exibirMensagemErroNomeObrigatorio(mensagemErro);
 });
+
+//Deve ser possível retornar da tela de cadastro para a Lista de Usuários cadastrados
+Given("acessei a tela cadastrar usuário", () => {
+    cadastrarUsuarioPage.acessarCadastroDeUsuario();
+});
+
+When("não informo o nome e o e-mail", () => {
+});
+
+Then("visualizo o botão voltar", () => {
+    cadastrarUsuarioPage.clicarEmVoltar();
+});
+
+And("visualizo a lista de usuários cadastrados", () => {
+    cadastrarUsuarioPage.retornarParaListaDeUsuarios();
+});
+
+//Deve ser possível ir da tela de cadastro para a Lista de Usuários cadastrados
+Given("acessei a tela cadastrar usuário", () => {
+    cadastrarUsuarioPage.acessarCadastroDeUsuario();
+});
+
+When("não informo o nome e o e-mail", () => {
+});
+
+Then("visualizo o logotipo", () => {
+    cadastrarUsuarioPage.clicarNoLogotipo();
+});
+
+And("visualizo a lista de usuários cadastrados", () => {
+    cadastrarUsuarioPage.retornarParaListaDeUsuarios();
+});
