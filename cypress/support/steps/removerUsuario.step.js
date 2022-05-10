@@ -17,7 +17,6 @@ And("confirmo a remoção do usuário", () => {
     removerUsuarioPage.clicarEmConfirmar();
 });
 
-
 //Não deve ser possível remover um usuário cadastrado
 Given("acessei o sistema para remover um usuário", () => {
     removerUsuarioPage.acessarSistema();
@@ -34,5 +33,3 @@ Then("visualizo a mensagem para remover {string}", (mensagem) => {
 And("cancelo a remoção do usuário", () => {
     removerUsuarioPage.clicarEmCancelar();
 });
-
-

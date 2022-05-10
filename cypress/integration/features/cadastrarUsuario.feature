@@ -1,12 +1,3 @@
-# 1. As informações necessárias para cadastrar um usuário são: nome e email.
-# 2. O formato aceito de e-mail segue o padrão nomeUtilizador@dominio.
-# Exemplo: nome@email.com.
-# Se o e-mail informado possuir um formato inválido, a operação de registro deverá ser cancelada.
-# 3. Não deve ser possível cadastrar um usuário com e-mail já utilizado no cadastro de outro usuário.
-# 4. Se houver a tentativa de cadastrar um usuário com e-mail já existente, o processo deverá ser bloqueado com a mensagem: User already exists.
-# 5. Não deve ser possível cadastrar um nome com mais de 100 caracteres.
-# 6. Não deve ser possível cadastrar um e-mail com mais de 60 caracteres.
-
 Feature: Cadastrar Usuário
     Como uma pessoa qualquer
     Desejo registrar informações de usuário

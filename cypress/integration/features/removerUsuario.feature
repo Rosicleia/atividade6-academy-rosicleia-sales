@@ -1,6 +1,3 @@
-# 1. O usuário a ser removido deve ser localizado através de seu identificador único.
-# 2. Se um usuário não for localizado pelo identificador informado, o sistema deverá se comportar como se houvesse removido as informações do usuário.
-
 Feature: Remover Usuário
     Como uma pessoa qualquer
     Desejo remover um usuário

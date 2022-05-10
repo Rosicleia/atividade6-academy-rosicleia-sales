@@ -1,14 +1,3 @@
-# 1. O usuário deve ser localizado através de seu identificador único.
-# 2. Caso nenhum usuário seja localizado pelo identificador único, a atualização não deve ser realizada.
-# 3. As informações necessárias para atualizar um usuário são: nome e email.
-# 4. O formato aceito de e-mail segue o padrão nomeUtilizador@dominio.
-# Exemplo: nome@email.com.
-# Se o e-mail informado possuir um formato inválido, a operação de atualização deverá ser cancelada.
-# 5. Não deve ser possível atualizar o e-mail de um usuário para um e-mail que já está em uso por outro usuário registrado.
-# 6. Se houver a tentativa de atualizar um usuário para tenha um e-mail que já está em uso por outro usuário registrado, o processo deverá ser bloqueado com a mensagem: E-mail already in use.
-# 7. Não deve ser possível atualizar o nome para que tenha mais de 100 caracteres.
-# 8. Não deve ser possível atualizar o e-mail para que tenha mais de 60 caracteres.
-
 Feature: Atualizar Usuário
     Como uma pessoa qualquer
     Desejo atualizar as informações de determinado usuário
