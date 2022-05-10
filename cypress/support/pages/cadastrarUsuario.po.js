@@ -98,8 +98,7 @@ class CadastrarUsuarioPage {
     }
 
     retornarParaListaDeUsuarios(){
-        cy.intercept("GET", "/api/v1/users", [this.usuario]);
-        cy.visit("");
+        cy.intercept("GET", "/api/v1/users", [this.usuario]);      
     }
 
     clicarNoLogotipo(){

@@ -136,7 +136,6 @@ class AtualizarUsuarioPage {
 
     retornarParaListaDeUsuarios(){
         cy.intercept("GET", "/api/v1/users", [this.usuario]);
-        cy.visit("");
     }
 
     clicarNoLogotipo(){
